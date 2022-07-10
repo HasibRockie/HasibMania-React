@@ -1,0 +1,17 @@
+.newpost{
+    margin: 30px 150px;
+    padding: 20px 40px;
+    background-color: rgb(75, 75, 75);
+    text-align: left;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+.head-newpost{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}

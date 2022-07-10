@@ -1,13 +1,18 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family:'Baloo Da 2', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color: #ccebda;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23ded6c5' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23a4a89c' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23d6d4be' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23a1a998' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23cdd1b6' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%239faa94' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23c4cfae' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%239cac90' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23bacca5' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%2399ad8b' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23b0ca9c' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%2396ae87' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

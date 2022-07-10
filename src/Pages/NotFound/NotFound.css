@@ -1,0 +1,31 @@
+.not-found h1{
+    font-size: 36vh;
+    color: gray;
+}
+
+.not-found h2{
+    font-size: 10vh;
+    letter-spacing: 10px;
+    font-weight: bolder;
+    color: rgba(220, 20, 60, 0.651);
+}
+
+.not-found{
+    padding: 30px 10px;
+}
+
+@media only screen and (max-width: 900px) {
+    .not-found h1{
+        font-size: 8rem;
+    }
+
+    .not-found h2{
+        font-size: 2rem;
+        letter-spacing: 4px;
+    }
+
+    .not-found{
+        padding: 20px 10px;
+    }
+    
+}
