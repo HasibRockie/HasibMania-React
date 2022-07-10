@@ -24,9 +24,7 @@
 .post-image {
   width: 100%;
   align-self: flex-end;
-  position: relative;
-  top: -0px;
-  left: 5px;
+  margin: 50px;
 }
 
 .post-title,
@@ -34,6 +32,12 @@
   padding: 10px 0px;
   font-weight: bold;
   color: coral;
+}
+
+.post-title{
+  text-align: center;
+  margin: 10px 0px;
+  text-transform: uppercase; 
 }
 
 .post-details-top {
@@ -47,14 +51,15 @@
   background-color: #f3f2ef;
 }
 
-.section:nth-child(1) {
-  display: grid;
-  grid-template-columns: 2fr 3fr;
+.inner:nth-child(2){
+  margin: 25px 0px;
 }
 
+
+
 .section img {
+  transform: translate(7px,-7px);
   border: 2px solid gray;
-  transform: translate(7px, -7px);
   box-shadow: -3px 3px 5px gray;
 }
 
@@ -65,13 +70,16 @@
 .category {
   display: flex;
   justify-content: space-between;
-  padding-right: 7px;
+  padding: 7px 15px 5px;
   font-weight: bold;
-  color: darkcyan;
+  color:antiquewhite;
+  background-color: black;
+  border-radius: 3px;
 }
 
 .details {
   color: rgb(66, 66, 66);
+
 }
 
 .section {

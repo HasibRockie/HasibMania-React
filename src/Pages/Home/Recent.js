@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import img1 from "../images/post01.png";
 import img2 from "../images/post02.png";
 import img3 from "../images/post03.png";
@@ -14,8 +14,18 @@ import img12 from "../images/post12.png";
 import img13 from "../images/post13.png";
 import img14 from "../images/post14.png";
 import img15 from "../images/post15.png";
+import Post from "./Post";
 
 const Recent = () => {
+
+  const [posts, setPosts] = useState([]);
+  useEffect(()=> {
+    fetch("http://localhost:5000/posts")
+    .then((res)=> res.json())
+    .then((data)=> setPosts(data.reverse().slice(0,10)));
+  },[]);
+
+
   return (
     <div className="recent">
       <h4>সাম্প্রতিক পোস্ট </h4>
@@ -24,6 +34,9 @@ const Recent = () => {
       <br />
       <br />
       <div className="all-posts">
+
+        {posts.map((post)=> (<Post key={posts._id} post={post}></Post>))}
+
         {/* post no 15  */}
         <div className="post">
           <div className="section">

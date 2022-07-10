@@ -15,3 +15,19 @@
     margin-top: 40px;
     margin-bottom: 50px;
 }
+
+.green-notification{
+    margin: 15px 0;
+    background-color: green;
+    color: black;
+    padding: 10px 40px;
+    border-radius: 7px;
+}
+
+.red-notification{
+    margin: 15px 0;
+    background-color: red;
+    color: black;
+    padding: 10px 40px;
+    border-radius: 7px;
+}
