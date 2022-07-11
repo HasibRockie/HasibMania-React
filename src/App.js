@@ -9,7 +9,7 @@ import Personals from "./Pages/Personals/Personals";
 import Others from "./Pages/Others/Others";
 import NotFound from "./Pages/NotFound/NotFound";
 import Gratitude from "./Pages/Gratitude/Gratitude";
-import NewPost from './Pages/NewPost/NewPost';
+import NewPost from "./Pages/NewPost/NewPost";
 import Post from "./Pages/Posts/Post";
 import AllPosts from "./Pages/AllPosts/AllPosts";
 import AddGratitude from "./Pages/AddGratitude/AddGratitude";
@@ -28,7 +28,11 @@ function App() {
           <Route exact path="/others" element={<Others />}></Route>
           <Route exact path="/gratitude" element={<Gratitude />}></Route>
           <Route exact path="/lnqiseh" element={<NewPost />}></Route>
-          <Route exact path="/lnqiseh/add-gratitude" element={<AddGratitude />}></Route>
+          <Route
+            exact
+            path="/lnqiseh/add-gratitude"
+            element={<AddGratitude />}
+          ></Route>
           <Route path="posts">
             <Route path=":postId" element={<Post />} />
           </Route>

@@ -6,7 +6,7 @@ const Blogs = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(()=> {
-    fetch("http://localhost:5000/fiction")
+    fetch("http://hasibmania-server.herokuapp.com/fiction")
     .then((res)=> res.json())
     .then((data)=> {
       const allPosts = (data.reverse());

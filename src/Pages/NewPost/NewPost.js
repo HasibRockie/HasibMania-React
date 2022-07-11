@@ -80,14 +80,14 @@ const newPost = () => {
   const para59Ref = useRef();
   const para60Ref = useRef();
 
-//   const [object, setObject] = useState({});
+  //   const [object, setObject] = useState({});
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
 
   const CreatePost = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:5000/posts", {
+    fetch("http://hasibmania-server.herokuapp.com/posts", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -95,7 +95,7 @@ const newPost = () => {
       body: JSON.stringify({
         title: titleRef.current.value,
         category: categoryRef.current.value,
-        postNo: postNoRef.current.value, 
+        postNo: postNoRef.current.value,
         date: dateRef.current.value,
         banner: imgBannerRef.current.value,
         img01: img01Ref.current.value,
@@ -174,7 +174,6 @@ const newPost = () => {
         setSuccess(true);
         setError(false);
         e.target.reset();
-        
       })
       .catch((err) => {
         console.log("error");
@@ -190,11 +189,9 @@ const newPost = () => {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Control type="text" placeholder="post title" ref={titleRef} />
         </Form.Group>
-        
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Control type="text" placeholder="post no" ref={postNoRef} />
         </Form.Group>
-
         <Form.Group className="mb-3">
           <Form.Select aria-label="Default select example" ref={categoryRef}>
             <option>Category</option>

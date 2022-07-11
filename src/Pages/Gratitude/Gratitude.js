@@ -8,7 +8,7 @@ const Gratitude = () => {
   const [messgaes, setMessages] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(()=> {
-    fetch("http://localhost:5000/gratitude")
+    fetch("http://hasibmania-server.herokuapp.com/gratitude")
     .then((res)=> res.json())
     .then((data)=> {
       const allPosts = (data);
