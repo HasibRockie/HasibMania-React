@@ -75,6 +75,13 @@
     font-weight: bold;
 }
 
+
+.number-of-dedication{
+    font-size: 53px;
+    color: gray;
+    font-weight: bold;
+}
+
 @media only screen and (max-width: 1100px){
 
     .section-grat{

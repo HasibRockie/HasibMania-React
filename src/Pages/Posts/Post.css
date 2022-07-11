@@ -5,6 +5,37 @@
     font-family: "Baloo Da 2", cursive;
 }
 
+.post-template{
+    background-color: rgb(232, 252, 245);
+    border: 2px solid gray;
+    margin: 40px 12%;
+    padding: 50px 55px;
+    border-radius: 5px;
+}
+
+.post-template-title{
+    margin-bottom: 30px;
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.post-template-image{
+    margin: 30px 10px;
+    width: 70%;
+}
+
+.loading{
+    font-size: 20px;
+    margin: 50px;
+}
+
+.loading-text{
+    margin-top: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
 .post-container img{
     border: 2px solid gray;
     margin-bottom: 20px;
@@ -41,9 +72,49 @@
     color:salmon;
 }
 
+.para{
+    text-align: justify;
+    font-size: 17px;
+    padding: 0 25px;
+}
+
+.writer{
+
+    font-weight: bold;
+    color:rgba(220, 20, 60, 0.671);
+}
 
 
 @media only screen and (max-width: 900px){
+
+    .post-template{
+        background-color: rgb(232, 252, 245);
+        border: 2px solid gray;
+        margin: 40px 15px;
+        padding: 50px 10px;
+        border-radius: 5px;
+    }
+    
+    .post-template-title{
+        margin-bottom: 30px;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+    
+    .post-template-image{
+        margin: 30px 0px;
+        width: 90%;
+        text-align: left;
+    }
+
+    .para{
+        text-align: justify;
+        font-size: 15px;
+        padding: 0 15px;
+    }
+
+
     .post-container{
         padding: 40px 10px;
     }

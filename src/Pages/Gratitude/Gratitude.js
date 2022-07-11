@@ -1,9 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Gratitude.css";
-import male from "./male.png";
-import female from "./female.png";
+
+
 
 const Gratitude = () => {
+
+  const [messgaes, setMessages] = useState([]);
+  const [loading, setLoading] = useState(true);
+  useEffect(()=> {
+    fetch("http://localhost:5000/gratitude")
+    .then((res)=> res.json())
+    .then((data)=> {
+      const allPosts = (data);
+      setMessages(allPosts);
+      setLoading(false);
+    });
+  },[]);
+
+  if(loading){
+      return <div className="loading">
+        <div className="spinner-grow loading" role="status">
+      <span className="sr-only loading">Loading...</span> 
+    </div>
+    
+      <h3 className="loading-text">LOADING...</h3>
+      </div>
+    
+  
+  }
+
+
+
   return (
     <div className="gratitude">
       <br />
@@ -19,58 +46,29 @@ const Gratitude = () => {
       </h5>
       <hr />
       <div className="section-grat">
-        {/* person-01  */}
-        <div className="item-grat">
-          <div className="p-top">
-            <div className="p-left">
-              <h4 className="p-name">হাছিনা আক্তার </h4>
-              <h6 className="p-relation">আম্মু </h6>
+
+        {
+          messgaes.map(message => 
+            <div key={message._id} className="item-grat">
+              <h5 className="number-of-dedication">{message.number}</h5>
+            <div className="p-top">
+              <div className="p-left">
+                <h4 className="p-name">{message.name}</h4>
+                <h6 className="p-relation">{message.relation} </h6>
+              </div>
+              <div className="p-right">
+                <img src={message.image} alt="hasib" />
+              </div>
             </div>
-            <div className="p-right">
-              <img src={female} alt="hasib" />
-            </div>
+            <hr />
+            <p className="p-details">
+             {message.message}
+            </p>
           </div>
-          <hr />
-          <p className="p-details">
-            সবার ক্ষেত্রে যা বাবা-মা দুজন মিলে সামলায়, আমাদের বেলায় উনি একলাই সামাল দিয়েছে। অনেক পারিবারিক বিপর্যয়ের মধ্যেও আমাদের কে আমাদের পথ থেকে বিচ্ছিন্ন হতে দেয়নি। নিজের জীবন স্যাক্রিফাইস করে আমাদের মাথায় উপর ছায়া হয়ে এখনো টিকে আছে। যখনি যে সমস্যায় পড়ি, মাথার মধ্যে এটাই আসে যে, আম্মু ভালো পরামর্শ দিতে পারবে। যেখানেই আম্মুর কথা মতো কাজ করেছি, সেখানেই ১০০% সফল হয়েছি। উদাহরণ দিয়ে শেষ করা যাবে না। আমার প্রিয় মানুষদের তালিকায় উনিই প্রথমে জায়গা পাওয়ার যোগ্য। 
-          </p>
-        </div>
+            )
+        }
 
-        {/* person-02  */}
 
-        <div className="item-grat">
-          <div className="p-top">
-            <div className="p-left">
-              <h4 className="p-name">মোঃ সিরাজুল ইসলাম</h4>
-              <h6 className="p-relation">আব্বু </h6>
-            </div>
-            <div className="p-right">
-              <img src={male} alt="hasib" />
-            </div>
-          </div>
-          <hr />
-          <p className="p-details">
-            আমার চোখে আমার বাবা নিখুত। যার সাথে আমি কারোরই তুলনা খুজে পাই না। প্রিয় জিনিস মানুষ হয়তো বেশিদিন ধরে রাখতে পারে না, তাই আমিও ধরে রাখতে পারিনি বেশিদিন। যার কাছে আমার কোন আবদারের শেষ ছিল না,তিনিও সব আবদার পূরণে ছিল এক পায়ে খাড়া। বিনিময়ে আমি কিছুই করতে পারিনি। 
-          </p>
-        </div>
-
-        {/* person-03  */}
-
-        <div className="item-grat">
-          <div className="p-top">
-            <div className="p-left">
-              <h4 className="p-name">নাফি ও নাহী </h4>
-              <h6 className="p-relation">ভাই</h6>
-            </div>
-            <div className="p-right">
-              <img src={male} alt="hasib" />
-            </div>
-          </div>
-          <hr />
-          <p className="p-details">
-            এরা আমার চেয়ে বেশি সফল হোক, সব দিক থেকে, এটাই আমি মন থেকে চাই। একটা বিষয় আমাকে ভালোই পীড়া দেয়, তা হলোঃ আমি আবদার করার জন্যে আব্বু কে পেয়েছিলাম, কিন্তু এরা বেশিদিন পায় নি। তাই অন্তত আমি যেন আমার অবস্থান থেকে তাদের প্রতি দায়িত্ব ঠিক-ঠাক পালন করতে পারি, সেটাই দোয়া করি আল্লাহর কাছে।  
-          </p>
-        </div>
       </div>
     </div>
   );
